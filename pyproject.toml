@@ -1,0 +1,19 @@
+[project]
+name = "computer-vision-tools"
+version = "0.0.1"
+authors = [{ name = "Olegs Nikisins", email = "15190051+olegnikgit@users.noreply.github.com" }]
+description = "A collection of computer vision tools and utilities."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "setuptools",
+    "tables",
+    "numpy==1.26.0",
+    "opencv-contrib-python==4.10.0.84",
+    "scikit-image",
+    "tqdm",
+    "pandas",
+    "h5py",
+    "pyyaml",
+]
+
