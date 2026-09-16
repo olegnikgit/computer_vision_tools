@@ -50,10 +50,19 @@ rm -rf .venv
 ```
 
 
+Currently available tools
+===================
 
+The script to perform **camera calibration using Charuco board**.
+It detects Charuco corners in the images, accumulates them, and performs camera calibration.
+The resulting camera matrix and distortion coefficients can be saved to a file.
+Images with detected corners can be optionally saved if the save_images flag is set.
 
+``src/computer_vision_tools/script/calibration/charuco_calibration.py``
 
+The script to performs **stereo camera calibration using Charuco board**.
+It detects Charuco corners in the stereo image pairs, matches common points, and performs stereo calibration.
+The resulting stereo parameters can be used for rectification and 3D reconstruction.
 
-
-
+``src/computer_vision_tools/script/calibration/charuco_stereo_calibration.py``
 

@@ -178,6 +178,28 @@ def run_charuco_calibration(images_path,
                             aruco_dict,
                             images_step,
                             save_images):
+    """
+    The function performs Charuco board calibration using the provided images and parameters.
+    It detects Charuco corners in the images, accumulates them, and performs camera calibration.
+    The resulting camera matrix and distortion coefficients can be saved to a file.
+    Images with detected corners can be optionally saved if the save_images flag is set.
+
+    Parameters:
+    - images_path: Path to the directory containing calibration images.
+    - save_path: Path to the directory where calibration results will be saved.
+    - calibration_filename: Filename for saving the calibration results.
+    - load_calibration_filename: Filename for loading existing calibration results.
+    - charuco_squares_x: Number of squares along the X-axis of the Charuco board.
+    - charuco_squares_y: Number of squares along the Y-axis of the Charuco board.
+    - square_length: Length of a square on the Charuco board in meters.
+    - marker_length: Length of an ArUco marker in meters.
+    - aruco_dict: Type of ArUco dictionary to use.
+    - images_step: Step to skip images during processing.
+    - save_images: Boolean flag to save images with detected corners.
+
+    Returns:
+    - A pandas DataFrame containing the rotation and translation vectors for each image.
+    """
 
     # Define the charuco board:
     board = aruco.CharucoBoard((charuco_squares_x, charuco_squares_y),

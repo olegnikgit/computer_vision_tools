@@ -182,6 +182,17 @@ def get_image_pairs(left_path, right_path):
 
 # =============================================================================
 def run_stereo_calibration(args):
+    """
+    The function performs stereo calibration using Charuco boards for both the left and right cameras.
+    It detects Charuco corners in the stereo image pairs, matches common points, and performs stereo calibration.
+    The resulting stereo parameters can be used for rectification and 3D reconstruction.
+
+    Parameters:
+    - args: Command-line arguments containing paths to images, calibration files, and Charuco board parameters.
+
+    Returns:
+    - None
+    """
 
     # Load intrinsics
     K1, D1, _, _ = load_calibration(args.left_calibration)
